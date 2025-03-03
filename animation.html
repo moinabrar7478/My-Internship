@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<SCRIPT>
+var images = [];
+
+images[0] = 'fb.jpg';
+images[1] = 'ig.jpg';
+images[2] = 'tw.jpg';
+var index = 0;
+
+function change() {
+  
+  if(index==0)
+  {
+   document.getElementById("mainPhoto").src='C:/website/images/tw.jpg';
+   index++;
+  }
+  else if (index == 1) {
+   document.getElementById("mainPhoto").src='C:/website/images/seti.jpg';
+   index++;
+  }
+  else if (index == 2) {
+   document.getElementById("mainPhoto").src='C:/website/images/ig.jpg';
+   index++;
+   index=0;
+  }
+    setInterval(change, 5000);
+  
+}
+
+</SCRIPT>
+</HEAD>
+<BODY>
+
+
+ 
+    <img id="mainPhoto" src="C:/website/images/fb.jpg">
+    
+  
+<SCRIPT>
+change();
+</SCRIPT>
+</BODY>
+</HTML>
