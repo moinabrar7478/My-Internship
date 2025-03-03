@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var error1,error2,error3;
+        function checkName()
+        {
+            var unm=document.getElementById("uname").value;
+            if(unm.length==0)
+                error1="false";
+            else
+            error1="true";
+           // alert('A');
+        }
+function checkEmail()
+{
+    var uemail=document.getElementById("email").value;
+    var pos = uemail.indexOf("@");
+    if (pos==-1) 
+        error2 = "false";
+        else
+        error2="true";
+     //alert('B');   
+}
+function checkMobile()
+{
+     var mobile1="";
+   // alert('A');
+    error3="true";
+    //alert(error3);
+    mobile1=document.getElementById("xyx").value;
+//alert(mobile1);
+if(mobile1.length!=10)
+    {
+        error3="false";
+        return;
+    }
+    for(i=0;i<10;i++)
+    {
+    x=mobile1.charAt(i);
+    if(!(x>='0'&&x<='9'))
+    {
+    error3="false";
+    break;
+    }
+   }
+}
+
+
+function checkinput()
+{
+    document.getElementById("errors").innerHTML="";
+    checkName();checkEmail();
+    
+    checkMobile();
+    if (error1=="false")
+    {
+        document.getElementById("errors").innerHTML += "<Font color=red>Name should not be empty!!!</Font><BR>";
+       
+    }
+     
+     if(error2=="false")
+    {
+         document.getElementById("errors").innerHTML += "<Font color=red>Invalid email!!!</Font><BR>";
+         
+    }
+    
+    if(error3=="false")
+    {
+         document.getElementById("errors").innerHTML += "<Font color=red>Invalid mobile no!!!</Font><BR>";
+         
+    }
+    if(error1=="false"||error2=="false"||error3=="false")
+    {
+    return false; 
+    }
+}
+    </script>
+
+</head>
+<body align="center" bgcolor="badami">
+    <form action="response.html" method="get" onsubmit="return checkinput()">
+    Name<input type="text" id=uname><br>
+E mail<input type="text" id="email"><br>
+Mobile<input type="text" id="xyx"><br>
+<input type="submit">
+<div id="errors">
+
+</div>
+    </form>
+    
+    
+</body>
+</html>
