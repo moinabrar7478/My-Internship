@@ -1,0 +1,17 @@
+<HTML>
+    <BODY bgcolor="red" align="center">
+        <div id="user-wish">
+        </div>   
+        <script>
+            document.getElementById("user-wish").innerHTML="Welcome User!";
+            var msg="";
+            var today=new Date();
+            var time=today.getHours();
+            if(hours>=o && hours<12) msg="Good Morning!";
+            else if(hours>=12 && hours<16) msg="Good Afternoon";
+            else if(hours>=16 && hours<19) msg="Good Evening";
+            else msg="Good Night";
+            document.getElementById("user-wish").innerHTML=msg;    
+        </script>
+    </BODY>
+</HTML>        
