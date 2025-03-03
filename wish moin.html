@@ -1,0 +1,22 @@
+<html>
+   <head>
+       <script>
+          function wish()
+          {
+            var unm=document.getElementById("uname").value;
+            document.getElementById("uwish").value="Hello  "+unm;  
+          } 
+          function clear1()
+          {
+          document.getElementById("uname").value="";
+          document.getElementById("uwish").value="";
+          }
+        </script>
+   </head>
+        <body bgcolor="yellow" align="center">
+          Enter your Name<input type="text" id="uname"><br>
+          <input type="text" size="40" id="uwish"><br>
+          <input type="button" value="wish" onClick=wish()>
+          <input type="button" value="clear" onClick=clear1()>
+        </body>
+</html>                
